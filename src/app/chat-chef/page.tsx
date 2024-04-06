@@ -97,7 +97,26 @@ const RecipiesAI: React.FC = () => {
 
     try {
       const res = await model.invoke([["human", prompt]]);
-      setRecipeResponse(res.content);
+      // setRecipeResponse(res.content);
+      let recipeText = "";
+
+  if (Array.isArray(res.content)) {
+    const firstMessage = res.content[0];
+
+    // Use a type guard to check for MessageContentText
+    if (typeof firstMessage === "string") {
+      recipeText = firstMessage;
+    } else {
+      // Handle other potential types within the array
+      console.warn("Unexpected message type in array:", firstMessage);
+    }
+  } else if (typeof res.content === "string") {
+    recipeText = res.content;
+  } else {
+    console.warn("Unexpected response format:", res.content);
+  }
+
+  setRecipeResponse(recipeText);
       setShowRecipeResponse(true);
       setIngredients([]); // Clear the ingredients list
     } catch (error) {
