@@ -25,7 +25,7 @@ ChefAI crafts personalized recipes from your ingredients using Next.js, LangChai
 ### 📺 Project Demo:
 Check out our project in action! Watch the full demo on YouTube:
 
-[![Project Demo](https://img.youtube.com/vi/sKGvW9dD5KU/maxresdefault.jpg)](https://www.youtube.com/watch?v=sKGvW9dD5KU?si=l5Lc0DU_ywqcD7De)
+[![Project Demo](https://img.youtube.com/vi/sKGvW9dD5KU/maxresdefault.jpg)](https://youtu.be/sKGvW9dD5KU)
 
 ---
 
